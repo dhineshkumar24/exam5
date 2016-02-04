@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1= "Results"
+    #BITLA_DAILY_INVENTORY
+      font(color="#000000")
+        table(style="width:100%")
+          thead
+             tr(bgcolor="#149B99")
+                 th From
+                 th To
+                 th Travels
+                 th Departure
+                 th Arrival
+                 th Hours
+                 th Fare
+          tbody
+             - each bitla in BITLA_DAILY_INVENTORY        
+                 tr(bgcolor="#BCF6F7")
+                   td= bitla.startCityName
+                   td= bitla.endCityName
+                   td= bitla.operatorName
+                   td= bitla.departureTime
+                   td= bitla.arrivalTime
+                   td= bitla.journeyHours
+                   td= bitla.fare
+        a(href="/")!= "Home"

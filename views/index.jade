@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1= "Bitla Search"
+    div.newbitla
+        form( method = "post" )
+             div
+                div
+                   span.label StartCity :
+                   input(type="text", name="start", id="editBitlaTitle")
+                div
+                   span.label EndCity :
+                   input(type="text", name="end", id="editBitlaTitle")
+                   br
+                div#editBitlaSubmit
+                   input(type="submit", value="Search")
+        a(href="/bitla/new")!= "Show all Bitla Services"
